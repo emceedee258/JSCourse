@@ -9,7 +9,9 @@ function upDate(previewPic){
         console.log(previewPic.alt);
         console.log(previewPic.src);
         x = document.getElementById("image");
+        x.style.backgroundColor = "#CCEECC";
         x.style.backgroundImage = "url("+previewPic.src+")";
+
         x.innerHTML = previewPic.alt;
 
         /*document.getElementById("image").innerHTML = previewPic.alt;*/
@@ -20,6 +22,7 @@ function upDate(previewPic){
     1) Update the url for the background image of the div with the id = "image" 
     back to the orginal-image.  You can use the css code to see what that original URL was*/
       x = document.getElementById("image");
+      x.style.backgroundColor = "#8e68ff";
       x.style.backgroundImage = "url('')";
       x.innerHTML = "Hover over an image below to display here.";
     /*2) Change the text  of the div with the id = "image" 
