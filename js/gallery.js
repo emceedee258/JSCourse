@@ -8,7 +8,7 @@ function upDate(previewPic){
     */
         console.log(previewPic.alt);
         console.log(previewPic.src);
-        x = document.getElementById("image");
+        let x = document.getElementById("image");
         x.style.backgroundColor = "#CCEECC";
         x.style.backgroundImage = "url("+previewPic.src+")";
 
@@ -21,7 +21,7 @@ function upDate(previewPic){
      /* In this function you should 
     1) Update the url for the background image of the div with the id = "image" 
     back to the orginal-image.  You can use the css code to see what that original URL was*/
-      x = document.getElementById("image");
+      let x = document.getElementById("image");
       x.style.backgroundColor = "#8e68ff";
       x.style.backgroundImage = "url('')";
       x.innerHTML = "Hover over an image below to display here.";
@@ -30,3 +30,11 @@ function upDate(previewPic){
     */
 		
 	}
+
+  function addTabfocus() {
+    const images = document.querySelectorAll(".preview");
+    for (let i=0; i<images.length; i++) {
+      console.log(images[i].alt);
+      images[i].setAttribute("tabindex", "0");
+    }
+  }
